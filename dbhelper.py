@@ -16,7 +16,7 @@ def get_all_inputs(self):
     try:
         query = "SELECT description FROM crimes;"
         with connection.cursor() as cursor:
-        cursor.execute(query)
+            cursor.execute(query)
         return cursor.fetchall()
     finally:
         connection.close()
@@ -36,7 +36,7 @@ def clear_all(self):
     try:
         query = "DELETE FROM crimes;"
         with connection.cursor() as cursor:
-        cursor.execute(query)
-        connection.commit()
+            cursor.execute(query)
+            connection.commit()
     finally:
         connection.close()
